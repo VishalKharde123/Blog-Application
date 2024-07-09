@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head') %>
+    <title>File Upload</title>
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+    <form method="post" action="/testing_submitted" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="profile">Profile Picture</label>
+            <input type="file" class="form-control" id="profile" name="profilePicture"
+                aria-describedby="emailHelp" placeholder="Enter Profile">
+        </div>
+        <button type="submit" class="btn btn-primary"
+                            style="margin-top: 50px;margin-bottom: 40px;width: 50%;">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/head') %>
+        <title>Sign In</title>
+        <style>
+            .form-group {
+                width: 50%;
+                /* Adjust the width as per your requirement */
+                /* You can also use other CSS properties to adjust the size */
+            }
+        </style>
+</head>
+
+<body>
+    <%- include('./partials/navbar') %>
+        <form style="margin-top: 50px;" method="post" action="/signin/sign_in_submit">
+            <center>
+                <div class="form-group col-md-6">
+                    <div style="border: solid black 2px;">
+                        <div class="form-group" style="margin-top: 50px;">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" name="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" name="password" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 50px;margin-bottom: 40px;width: 50%;">Submit</button>
+                    </div>
+                </div>
+            </center>
+        </form>
+</body>
+
+<script>
+    // Wait for the entire document to load
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById("btn2").hidden = true;
+    });
+</script>
+
+</html>
